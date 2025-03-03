@@ -2,9 +2,9 @@
 The aim is automation and to eliminate the need for remembering calling each deallocator function. You just have to remember one thing: use the macro "Return(0);" at the end of the program instead of "return 0;".
 What you need to be familiar is this:
 * [struct dealloc_register](https://github.com/mbedded-usr/deallocator-manager/blob/main/Details.md#dealloc_register)
-* Malloc()
-* free_up()
-* Return(0) macro function
+* [Malloc()](https://github.com/mbedded-usr/deallocator-manager/blob/main/Details.md#dealloc_register)
+* [free_up()]()
+* [Return(0) macro function]()
 
 ## dealloc_register
 It's a struct that holds a boolean variable and a deallocator function. The bool value indicates whether the deallocator functions is already added to the list of deallocator functions. The deallocator function should properly release all allocated space.
