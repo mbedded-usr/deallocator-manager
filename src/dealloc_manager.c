@@ -1,7 +1,7 @@
 #include "dealloc_manager.h"
 #include <stdbool.h>
 
-dealloc_node* main_node = 0; // head of list
+static dealloc_node* main_node = 0; // head of list
 
 static void add_deallocator(deallocator dealloc_func)
 {
