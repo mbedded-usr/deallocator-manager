@@ -16,7 +16,7 @@
 static Mem_bundle_array _mem_bundle_array = {
 	.array = 0,
    	.size = 0,
-    .capacity = 0
+        .capacity = 0
 };
 
 static void mem_bundle_array_init(Mem_bundle* _new_mem_bundle)
@@ -69,9 +69,9 @@ static void insert_mem_bundle(Mem_bundle* _new_mem_bundle)
 Mem_bundle new_mem_bundle()
 {
     Mem_bundle _new_mem_bundle = { .data = 0, 
-	    			               .dealloc_func = 0, 
-				                   .is_deallocator_registered = false
-   				                 };
+	    			   .dealloc_func = 0, 
+				   .is_deallocator_registered = false
+   				 };
     return _new_mem_bundle;
 }
 
@@ -125,7 +125,7 @@ void free_up()
 {
     for (int i = 0; i < _mem_bundle_array.size; ++i) 
     {
-	    free_pointer_array(_mem_bundle_array.array[i].dealloc_func,
+	free_pointer_array(_mem_bundle_array.array[i].dealloc_func,
                           _mem_bundle_array.array[i].data);
     }
     if (_mem_bundle_array.array != 0)
