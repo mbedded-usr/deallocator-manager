@@ -4,10 +4,16 @@
 #include "dealloc_manager_types.h"
 #include <stdbool.h>
 
+/*
+ * @brief: a `Mem_bundle` is required to conduct
+   the automated memory management. Always call `new_mem_bundle()`
+   to make a new one. Then provide it with your custom `deallocaor`
+   which will be used to release allocated memory. Finally pass it to `Malloc()`
+*/
 typedef struct Mem_bundle
 {
     bool is_deallocator_registered;
-    void* pointer_array;
+    void* data;
     deallocator dealloc_func;
 } Mem_bundle; // also consider the case where the 'dealloc_func' has special implementation.
 

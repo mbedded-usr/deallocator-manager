@@ -18,6 +18,7 @@ int main()
       printf("x[%d]=%d\n", i, x[i]);
    }
    
+   // pass the compile-time macro `WARNING_ON` in order to prevent memory loss. 
    float* f_arr = (float*)Malloc(12 * sizeof(float), &int_mem_bundle);
    f_arr[8] = 45.32;
    f_arr[2] = -7.0;
